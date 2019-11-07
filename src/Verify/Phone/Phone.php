@@ -2,7 +2,7 @@
 /**
  * 电话号码验证
  */
-namespace Verify\Phone
+namespace Verify\Phone;
 
 class Phone
 {
