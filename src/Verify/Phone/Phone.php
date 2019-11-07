@@ -7,7 +7,7 @@ namespace Verify\Phone;
 class Phone
 {
 
-	private $phoneNum = ''
+	private $phoneNum = '';
 	
 	function __construct($phoneNum = '')
 	{
