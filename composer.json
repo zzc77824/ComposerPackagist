@@ -13,7 +13,7 @@
     "require": {},
 	"autoload": {
 		"psr-4": {
-			"Zhangzc\\Virify\\": "src/Virify"
+			"Verify\\Phone\\": "src/Virify/Phone"
 		}
 	}
 }
