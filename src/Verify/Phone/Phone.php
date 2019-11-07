@@ -14,11 +14,12 @@ class Phone
 		$this->phoneNum = $phoneNum;
 	}
 
-	public function checkPhone()
+	public function checkPhone($phone = '')
 	{
-		$preg_phone='/^1[34578]\d{9}$/ims'
-        if (preg_match($preg_phone, $this->phoneNum)) {
-			return $this->phoneNum;
+		$num = isset($phone)?$phone:$this->phoneNum;
+		$preg_phone='/^1[34578]\d{9}$/ims';
+        if (preg_match($preg_phone, $num)) {
+			return $num;
         } else {
 			return false;
         }
