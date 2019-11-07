@@ -1,0 +1,19 @@
+{
+    "name": "zhangzc/all",
+    "description": "所有composer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhangzc",
+            "email": "composer@zhangzc.top"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload": {
+		"psr-4": {
+			"Zhangzc\\Virify\\": "src/Virify"
+		}
+	}
+}
