@@ -6,9 +6,21 @@ namespace Verify\Phone;
 
 class Phone
 {
+
+	private $phoneNum = ''
 	
-	function __construct()
+	function __construct($phoneNum = '')
 	{
-		echo "Verify\Phone";
+		$this->phoneNum = $phoneNum;
+	}
+
+	public function checkPhone()
+	{
+		$preg_phone='/^1[34578]\d{9}$/ims'
+        if (preg_match($preg_phone, $this->phoneNum)) {
+			return $this->phoneNum;
+        } else {
+			return false;
+        }
 	}
 }
