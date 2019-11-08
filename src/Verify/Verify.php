@@ -2,9 +2,9 @@
 /**
  * 电话号码验证
  */
-namespace Verify\Phone;
+namespace Verify;
 
-class Phone
+class Verify
 {
 
 	private $phoneNum = '';
