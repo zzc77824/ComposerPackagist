@@ -16,7 +16,7 @@ class Phone
 
 	public function checkPhone($phone = '')
 	{
-		$num = isset($phone)?$phone:$this->phoneNum;
+        $num = !empty($phone)?$phone:$this->phoneNum;
 		$preg_phone='/^1[34578]\d{9}$/ims';
         if (preg_match($preg_phone, $num)) {
 			return $num;
