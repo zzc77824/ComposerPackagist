@@ -7,16 +7,16 @@ namespace Verify;
 class Verify
 {
 
-	private $phoneNum = '';
+	private $param = '';
 	
-	function __construct($phoneNum = '')
+	function __construct($param = '')
 	{
-		$this->phoneNum = $phoneNum;
+		$this->param = $param;
 	}
 
 	public function checkPhone($phone = '')
 	{
-        $num = !empty($phone)?$phone:$this->phoneNum;
+        $num = !empty($phone)?$phone:$this->param;
 		$preg_phone='/^1[34578]\d{9}$/ims';
         if (preg_match($preg_phone, $num)) {
 			return $num;
@@ -24,4 +24,9 @@ class Verify
 			return false;
         }
 	}
+
+	public function checkEmail($email = '')
+    {
+
+    }
 }
