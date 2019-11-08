@@ -18,10 +18,10 @@ class Phone
 	{
 		$num = isset($phone)?$phone:$this->phoneNum;
 		$preg_phone='/^1[34578]\d{9}$/ims';
-        if (preg_match($preg_phone, $num)) {
+        if (preg_match($preg_phone, $num)) {
 			return $num;
-        } else {
+        } else {
 			return false;
-        }
+        }
 	}
 }
