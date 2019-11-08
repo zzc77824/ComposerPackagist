@@ -1,6 +1,6 @@
 <?php
 /**
- * 电话号码验证
+ * 验证方法类
  */
 namespace Verify;
 
