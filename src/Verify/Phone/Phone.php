@@ -24,9 +24,4 @@ class Phone
 			return false;
         }
 	}
-
-	public function test()
-    {
-        echo "webhooks";
-    }
 }
