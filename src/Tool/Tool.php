@@ -95,7 +95,7 @@ class Tool
         $data   = substr($data,10);
 
         if($expire > 0 && $expire < time()) {
-            return 'This string is time limit and out of date';
+            return 'ERROR: This string is time limit and out of date';
         }
         $x      = 0;
         $len    = strlen($data);
