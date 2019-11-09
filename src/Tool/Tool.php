@@ -83,7 +83,7 @@ class Tool
      * @return string
      */
     function decrypt($data, $key = ''){
-        $key    = md5(empty($key) ? '': $key);
+        $key    = md5(empty($key) ? 'EncryptedString': $key);
         $data   = str_replace(['-','_'],['+','/'],$data);
         $mod4   = strlen($data) % 4;
         if ($mod4) {
