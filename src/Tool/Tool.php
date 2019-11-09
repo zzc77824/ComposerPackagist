@@ -49,15 +49,15 @@ class Tool
 
     /**
      * 加密方法
-     * @param string $data 要加密的字符串
+     * @param string $string 要加密的字符串
      * @param string $key  加密密钥
      * @param int $expire  过期时间 单位 秒
      * @return string
      */
-    function encrypt($data, $key = '', $expire = 0)
+    function encrypt($string, $key = '', $expire = 0)
     {
         $key = md5(empty($key) ? 'EncryptedString' : $key);
-        $data = base64_encode($data);//MTIzNDU2
+        $data = base64_encode($string);//MTIzNDU2
         $x = 0;
         $len = strlen($data);
         $l = strlen($key);
@@ -78,13 +78,13 @@ class Tool
 
     /**
      * 解密方法
-     * @param  string $data 要解密的字符串 （必须是think_encrypt方法加密的字符串）
+     * @param  string $string 要解密的字符串 （必须是think_encrypt方法加密的字符串）
      * @param  string $key  加密密钥
      * @return string
      */
-    function decrypt($data, $key = ''){
+    function decrypt($string, $key = ''){
         $key    = md5(empty($key) ? 'EncryptedString': $key);
-        $data   = str_replace(['-','_'],['+','/'],$data);
+        $data   = str_replace(['-','_'],['+','/'],$string);
         $mod4   = strlen($data) % 4;
         if ($mod4) {
             $data .= substr('====', $mod4);
