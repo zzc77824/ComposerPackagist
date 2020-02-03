@@ -28,7 +28,7 @@ class Verify
 	public function checkEmail($email = '')
     {
         $email = !empty($email)?$email:$this->param;
-        return filter_var($email,FILTER_SANITIZE_EMAIL);
+        return filter_var($email,FILTER_VALIDATE_EMAIL);
 
     }
 }
